@@ -1,6 +1,6 @@
 TafGO - is a service to find quick shift for one day or one week.
 -----
-Stack: React + Node.js
+Stack: React + Node.js + MariaDB
 -----
 Easy to use : 
 <ul>
