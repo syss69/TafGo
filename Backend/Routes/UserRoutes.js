@@ -3,10 +3,10 @@ import UserController from "../Controllers/UserController.js";
 
 const router = express.Router();
 
-router.get("/id/:id", (req, res) => {
-    res.status(200).send(`You tring to have user with id ${req.params.id}. It is not finished yet`)
-})
+router.get("/id/:id", UserController.getUserById);
 
-router.get("/all", UserController.getAllUsers)
+router.get("/all", UserController.getAllUsers);
+
+router.post("/login", UserController.loginUser);
 
 export default router;
