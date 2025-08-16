@@ -1,7 +1,7 @@
 import  RepoAuth from "../Repositories/AuthRepository.js";
 
 class AuthController {
-    async register (req, res){
+    async registerUser (req, res){
         try{
             const response = await RepoAuth.registerUser(req.body);
             return res.status(response.status).json(response.response)
@@ -10,7 +10,7 @@ class AuthController {
         }
     }
 
-    async login (req, res){
+    async loginUser (req, res){
         try{
             const response =  await RepoAuth.loginUser(req.body);
             return res.status(response.status).json(response.response);
