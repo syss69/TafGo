@@ -32,14 +32,14 @@ async loginUser(credentials){
         let conn;
         try{
             const {email, password} = credentials;
-            const rows = await pool.query('SELECT * FROM Users WHERE email = ? ', [email]);
+            const rows = await pool.query('SELECT * FROM Users WHERE email = ? ', [email]);  
             if (rows.length < 1){
                 return {status: 401, response: "User do not exists or password is invalid"};
             }else{
                 if( await argon2.verify(rows[0].password, password)){
                     return {status: 200, response: "Authorized"}
                 }else{
-                    return {status: 401, response: "User do not exists or password is invalid"};
+                    return {status: 401, response: "User do not exists or password is invalid", userId: rows[0].id};
                 }
             }
         }catch(err){

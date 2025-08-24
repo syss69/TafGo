@@ -4,7 +4,10 @@
   "description": "TafGO - is a service to find quick shift for one day or one week.\r -----\r Stack: React + Node.js\r -----\r Easy to use : \r <ul>\r <li>Create Your Account: Enter your name, connect your email, add your professional skills</li>\r <li>Navigate in the app using map, or just explore list</li>\r <li>Send your application</li>\r </ul>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev:front\" \"npm run dev:back\"",
+    "dev:front": "cd Frontend && npm run dev",
+    "dev:back": "nodemon Backend/app.js"
   },
   "repository": {
     "type": "git",

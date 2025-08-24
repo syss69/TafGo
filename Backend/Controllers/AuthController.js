@@ -18,6 +18,15 @@ class AuthController {
             return res.status(500).json(err.message);
         }
     }
+
+    async logout(req, res){
+        try{
+            req.session.destroy();
+            return res.status(200).send("You are logged out")
+        }catch(err){
+            return res.status(500).json(err.message);
+        }
+    }
 }
 
 export default new AuthController ();
