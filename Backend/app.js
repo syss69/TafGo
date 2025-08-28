@@ -27,7 +27,6 @@ app.get("/", (req, res) => {
 })
 
 app.get("/check-session", (req, res) => {
-  console.log(req.session); 
   res.json(req.session);
 });
 
