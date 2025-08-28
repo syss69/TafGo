@@ -5,6 +5,7 @@ import AuthLayout from "../layouts/AuthLayout";
 
 import Test from "../pages/Home/test"
 import Login from "../pages/Auth/Login";
+import Registration from "../pages/Auth/Registration";
 
 export const routes: RouteObject[] = [
     {
@@ -18,7 +19,8 @@ export const routes: RouteObject[] = [
         path: "/auth",
         element: <AuthLayout/>,
         children: [
-            {path: "login", element: <Login/>}
+            {path: "login", element: <Login/>},
+            {path: "register", element: <Registration />}
         ]
     }
 ];

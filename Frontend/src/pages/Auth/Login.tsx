@@ -40,7 +40,7 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none"
-              placeholder="Введите пароль"
+              placeholder="Your password"
               required
             />
           </div>
@@ -51,12 +51,16 @@ function Login() {
             Login
           </button>
         </form>
-
-        {/* Extra links */}
         <p className="mt-6 text-sm text-gray-600 text-center">
           Do not have an account?{" "}
-          <a href="/register" className="text-blue-600 hover:underline">
+          <a href="/auth/register" className="text-blue-600 hover:underline">
             Registartion
+          </a>
+        </p>
+        <p className="mt-6 text-sm text-gray-600 text-center">
+          Login for enterprise?{" "}
+          <a href="/register" className="text-blue-600 hover:underline">
+            Login
           </a>
         </p>
         <p className="mt-6 text-sm text-gray-600 text-center">
