@@ -37,9 +37,9 @@ async loginUser(credentials){
                 return {status: 401, response: "User do not exists or password is invalid"};
             }else{
                 if( await argon2.verify(rows[0].password, password)){
-                    return {status: 200, response: "Authorized"}
+                    return {status: 200, response: "Authorized", userId: rows[0].id}
                 }else{
-                    return {status: 401, response: "User do not exists or password is invalid", userId: rows[0].id};
+                    return {status: 401, response: "User do not exists or password is invalid"};
                 }
             }
         }catch(err){

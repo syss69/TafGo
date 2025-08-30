@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/check-session", (req, res) => {
-  res.json(req.session);
+  res.json(req.session.userId);
 });
 
 app.use("/user", userRoutes);
