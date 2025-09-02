@@ -24,7 +24,7 @@ app.use(session({
 
 app.get("/", (req, res) => {
     res.status(200).send("OK")
-})
+}) 
 
 app.get("/check-session", (req, res) => {
   res.json(req.session.userId);

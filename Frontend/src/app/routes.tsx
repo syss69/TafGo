@@ -6,6 +6,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Test from "../pages/Home/test"
 import Login from "../pages/Auth/Login";
 import Registration from "../pages/Auth/Registration";
+import NotFound from "../pages/Error/NotFound";
 
 export const routes: RouteObject[] = [
     {
@@ -22,5 +23,9 @@ export const routes: RouteObject[] = [
             {path: "login", element: <Login/>},
             {path: "register", element: <Registration />}
         ]
+    },
+    {
+        path: "*",
+        element: <NotFound/>
     }
 ];
