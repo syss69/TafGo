@@ -24,10 +24,12 @@
   "dependencies": {
     "argon2": "^0.44.0",
     "concurrently": "^9.2.1",
+    "connect-mongo": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
-    "mariadb": "^3.4.5"
+    "mariadb": "^3.4.5",
+    "mongod": "^2.0.0"
   }
 }
